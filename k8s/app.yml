@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-v5
+  name: app-v1
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
           image: booksapp:1.0.0
           ports:
             - name: http
-              containerPort: 8881
+              containerPort: 9991
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://mysql:3306/test"
